@@ -1,0 +1,247 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Almighty Civic Prototype</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--text:#1d2433;--muted:#667085;--pri:#0f766e;--pri2:#115e59;--ok:#15803d;--warn:#b45309;--bad:#be185d;--line:#d0d5dd;--shadow:0 8px 26px rgba(16,24,40,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,var(--bg),#eef2ff);color:var(--text)}
+.wrap{max-width:1200px;margin:0 auto;padding:16px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 0}.brand{font-weight:900;font-size:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#e0f2fe;color:#075985;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-1px)}.pri{background:var(--pri);color:#fff}.sec{background:#fff;border:1px solid var(--line)}.danger{background:#fde2f1;color:var(--bad);border:1px solid #f7b8db}
+.grid{display:grid;gap:16px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:1.2fr .8fr}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow)}.hero{padding:24px 0 12px}.hero h1{font-size:40px;line-height:1.05;margin:10px 0}.muted{color:var(--muted)}input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit;color:var(--text)}textarea{min-height:110px;resize:vertical}label{display:block;font-size:13px;font-weight:700;margin:10px 0 6px}.row{display:flex;gap:10px;flex-wrap:wrap}.chip{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer}.chip.on{background:#fef3c7;color:#92400e;border-color:#fbbf24}.status{display:inline-flex;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800}.open{background:#fef3c7;color:#92400e}.prog{background:#dbeafe;color:#1d4ed8}.done{background:#dcfce7;color:#166534}.esc{background:#fee2e2;color:#991b1b}.nav{display:flex;gap:8px;flex-wrap:wrap}.tab{padding:10px 14px;border:1px solid var(--line);background:#fff;border-radius:12px;cursor:pointer;font-weight:700}.tab.active{background:#ecfeff;color:#0f766e;border-color:#67e8f9}.page{display:none}.page.active{display:block}.list{display:grid;gap:10px}.item{padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff}.table{overflow:auto}.table table{width:100%;border-collapse:collapse}.table th,.table td{padding:10px 12px;border-bottom:1px solid #e5e7eb;text-align:left;font-size:13px;vertical-align:top}.map{position:relative;min-height:160px;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#dbeafe,#dcfce7)}.pin{position:absolute;width:16px;height:16px;border-radius:50%;background:var(--bad)}.pin:nth-child(1){top:32%;left:20%}.pin:nth-child(2){top:54%;left:55%}.pin:nth-child(3){top:18%;left:76%;background:var(--pri)}.progress{height:10px;background:#eef2ff;border-radius:999px;overflow:hidden}.progress span{display:block;height:100%;background:var(--pri)}.small{font-size:12px}.hide{display:none}.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px}.loginbox{width:min(1080px,100%);display:grid;grid-template-columns:1.05fr .95fr;gap:16px}.loginbox .card{min-height:640px}.footer{padding:24px 0 40px;color:var(--muted);font-size:13px}@media (max-width:980px){.g2,.g3,.g4,.loginbox{grid-template-columns:1fr}.hero h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div id="loginPage" class="login">
+  <div class="loginbox">
+    <div class="card">
+      <span class="pill">all-in-one prototype</span>
+      <h1>Smart civic complaint system with login, GPS, rewards, and wallet</h1>
+      <p class="muted">This single HTML file includes role-based login, complaint reporting, worker assignment, admin control, live location capture, and reward coin withdrawal.</p>
+      <div class="grid g3" style="margin-top:18px">
+        <div class="card"><b>Citizen</b><div class="small muted">Submit complaints and track status</div></div>
+        <div class="card"><b>Worker</b><div class="small muted">Accept jobs and update work</div></div>
+        <div class="card"><b>Admin</b><div class="small muted">Verify, reopen, and escalate</div></div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <b>Demo credentials</b>
+        <div class="small muted" style="margin-top:8px">Citizen: citizen@demo.in / 123456</div>
+        <div class="small muted">Worker: worker@demo.in / 123456</div>
+        <div class="small muted">Admin: admin@demo.in / 123456</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row"><button class="tab active" data-role="citizen">Citizen</button><button class="tab" data-role="worker">Worker</button><button class="tab" data-role="admin">Admin</button></div>
+      <label>Role</label><select id="role"><option value="citizen">Citizen</option><option value="worker">Worker</option><option value="admin">Admin</option></select>
+      <label>Username</label><input id="user" value="citizen@demo.in" />
+      <label>Password</label><input id="pass" type="password" value="123456" />
+      <label><input id="consent" type="checkbox" checked /> I consent to demo login and live location tracking.</label>
+      <div class="row" style="margin-top:14px"><button class="btn pri" id="loginBtn">Login</button></div>
+      <div id="loginMsg" class="card hide" style="margin-top:14px;background:#f8fafc"></div>
+    </div>
+  </div>
+</div>
+
+<div id="appPage" class="hide">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">Smart Civic App</div>
+      <div class="row"><span class="pill" id="rolePill">Citizen</span><button class="btn sec" id="logoutBtn">Logout</button><button class="btn sec" id="themeBtn">Theme</button></div>
+    </div>
+
+    <div class="hero card">
+      <span class="pill">prototype</span>
+      <h1 id="heroTitle">Citizen dashboard</h1>
+      <p id="heroText" class="muted">Submit complaints, get live GPS, track resolution, and withdraw rewards.</p>
+    </div>
+
+    <div class="nav" style="margin:16px 0">
+      <button class="tab active" data-screen="citizenScreen">Citizen</button>
+      <button class="tab" data-screen="workerScreen">Worker</button>
+      <button class="tab" data-screen="adminScreen">Admin</button>
+      <button class="tab" data-screen="rewardScreen">Reward coins</button>
+      <button class="tab" data-screen="schemaScreen">Schema</button>
+    </div>
+
+    <div class="page active" id="citizenScreen">
+      <div class="grid g4">
+        <div class="card">
+          <div class="row"><span class="pill">citizen complaint</span><button class="btn sec" id="liveLocationBtn">Get live location</button><button class="btn sec" id="geoStateBtn">Location status</button></div>
+          <label>Complaint type</label><select id="issueType"><option>Pothole</option><option>Drainage</option><option>Streetlight</option><option>Garbage</option><option>Water leakage</option></select>
+          <label>Title</label><input id="title" value="Pothole near Patia signal" />
+          <label>Description</label><textarea id="desc">Large pothole causing danger for two-wheelers.</textarea>
+          <div class="grid g2">
+            <div><label>Latitude</label><input id="lat" placeholder="Live latitude" /></div>
+            <div><label>Longitude</label><input id="lng" placeholder="Live longitude" /></div>
+          </div>
+          <div class="grid g2">
+            <div><label>Altitude</label><input id="alt" placeholder="Altitude" /></div>
+            <div><label>Landmark</label><input id="landmark" value="Near Patia traffic signal" /></div>
+          </div>
+          <label>Photo/video file name</label><input id="media" value="issue.jpg" />
+          <div class="row" style="margin-top:14px"><button class="btn pri" id="submitComplaint">Submit complaint</button><button class="btn sec" id="duplicateBtn">Check duplicate</button></div>
+          <div id="citizenMsg" class="card hide" style="margin-top:14px;background:#f8fafc"></div>
+        </div>
+        <div class="card">
+          <span class="pill">live map</span>
+          <h3>Current location track</h3>
+          <div class="map" id="mapBox" style="margin-top:10px"><div class="pin"></div><div class="pin"></div><div class="pin"></div></div>
+          <div class="grid g3" style="margin-top:12px"><div class="card"><b>Coins</b><div id="coinCount">240</div></div><div class="card"><b>Open</b><div id="openCount">0</div></div><div class="card"><b>Closed</b><div id="closedCount">0</div></div></div>
+          <div style="margin-top:12px" class="list" id="myComplaints"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="workerScreen">
+      <div class="grid g2">
+        <div class="card"><span class="pill">worker tasks</span><div id="workerList" class="list" style="margin-top:12px"></div></div>
+        <div class="card">
+          <span class="pill">update task</span>
+          <label>Complaint</label><select id="workerSelect"></select>
+          <label>Work note</label><textarea id="workerNote">Filled pothole and completed surface leveling.</textarea>
+          <label>Proof file</label><input id="proofFile" value="after-repair.jpg" />
+          <div class="row" style="margin-top:14px"><button class="btn sec" id="acceptTask">Accept</button><button class="btn pri" id="completeTask">Complete</button><button class="btn sec" id="extensionBtn">Request extension</button></div>
+          <div id="workerMsg" class="card hide" style="margin-top:14px;background:#f8fafc"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="adminScreen">
+      <div class="grid g2">
+        <div class="card"><span class="pill">admin dashboard</span><div class="grid g3" style="margin-top:12px"><div class="card"><b>Total</b><div id="totalCount">0</div></div><div class="card"><b>Resolved</b><div id="resolvedCount">0</div></div><div class="card"><b>Escalated</b><div id="escalatedCount">0</div></div></div><div class="table" style="margin-top:12px"><table><thead><tr><th>ID</th><th>Issue</th><th>Worker</th><th>Status</th><th>Action</th></tr></thead><tbody id="adminTable"></tbody></table></div></div>
+        <div class="card"><span class="pill">control panel</span><label>Complaint</label><select id="adminSelect"></select><div class="row" style="margin-top:14px"><button class="btn pri" id="verifyBtn">Verify & close</button><button class="btn sec" id="reopenBtn">Re-open</button><button class="btn danger" id="escalateBtn">Escalate</button></div><div id="adminMsg" class="card hide" style="margin-top:14px;background:#f8fafc"></div></div>
+      </div>
+    </div>
+
+    <div class="page" id="rewardScreen">
+      <div class="grid g2">
+        <div class="card">
+          <span class="pill">reward wallet</span>
+          <h2>Withdrawal section</h2>
+          <p class="muted">Conversion rule: 100 coins = 1 Rs.</p>
+          <div class="grid g3" style="margin-top:12px"><div class="card"><b>Available coins</b><div id="walletCoins">240</div></div><div class="card"><b>Withdrawable Rs</b><div id="walletRs">2</div></div><div class="card"><b>Remaining coins</b><div id="walletRemain">40</div></div></div>
+          <label>Withdraw coins</label><input id="withdrawCoins" type="number" value="100" min="100" step="100" />
+          <div class="row" style="margin-top:14px"><button class="btn pri" id="withdrawBtn">Withdraw</button></div>
+          <div class="progress" style="margin-top:16px"><span id="walletBar" style="width:0%"></span></div>
+          <div id="walletMsg" class="card hide" style="margin-top:14px;background:#f8fafc"></div>
+        </div>
+        <div class="card"><span class="pill">ledger</span><div id="ledger" class="list" style="margin-top:12px"></div></div>
+      </div>
+    </div>
+
+    <div class="page" id="schemaScreen">
+      <div class="card">
+        <span class="pill">backend schema</span>
+        <div style="margin-top:12px;white-space:pre-wrap;font-family:monospace">users(id, name, username, password_hash, role, coins, created_at)
+workers(id, user_id, ward, latitude, longitude, available, active_tasks)
+complaints(id, citizen_id, category, title, description, severity, media, latitude, longitude, altitude, landmark, status, worker_id, created_at, deadline_at, escalated, verification_status)
+updates(id, complaint_id, actor_role, message, created_at)
+rewards(id, user_id, coins, rs_value, created_at)
+withdrawals(id, user_id, coins, rs_value, status, created_at)
+notifications(id, target_role, target_id, title, message, created_at)</div>
+      </div>
+    </div>
+
+    <div class="footer">Prototype only. Geolocation requires user permission and HTTPS in real deployment.</div>
+  </div>
+</div>
+<script>
+const db={coins:240,complaints:[],workerPool:[{name:'S. Kumar',skill:'Road',lat:20.356,lng:85.821,active:0},{name:'R. Das',skill:'Drainage',lat:20.3505,lng:85.8162,active:0},{name:'M. Behera',skill:'Electrical',lat:20.3642,lng:85.8274,active:0}],ledger:[]};
+const roleData={citizen:{u:'citizen@demo.in',p:'123456',label:'Citizen'},worker:{u:'worker@demo.in',p:'123456',label:'Worker'},admin:{u:'admin@demo.in',p:'123456',label:'Admin'}};
+let role='citizen';
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s),show=(id,msg)=>{const e=$(id);e.textContent=msg;e.classList.remove('hide')};
+function showScreen(id){$$('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');$$('.nav .tab').forEach(t=>t.classList.toggle('active',t.dataset.screen===id))}
+function getPos(){if(!navigator.geolocation)return show('#citizenMsg','Geolocation not supported');navigator.geolocation.getCurrentPosition(pos=>{lat.value=pos.coords.latitude.toFixed(6);lng.value=pos.coords.longitude.toFixed(6);alt.value=(pos.coords.altitude??'0').toString();show('#citizenMsg',`Live location captured: ${lat.value}, ${lng.value}`)},err=>show('#citizenMsg','Location error: '+err.message),{enableHighAccuracy:true,timeout:10000,maximumAge:0})}
+function checkGeoPermission(){if(!navigator.permissions||!navigator.permissions.query){show('#citizenMsg','Permissions API not supported.');return}navigator.permissions.query({name:'geolocation'}).then(res=>show('#citizenMsg','Geolocation permission: '+res.state))}
+function nearestWorker(lat,lng){return db.workerPool.map(w=>({...w,d:Math.hypot(w.lat-lat,w.lng-lng)})).sort((a,b)=>a.d-b.d)[0]}
+function render(){
+coinCount.textContent=db.coins;walletCoins.textContent=db.coins;walletRs.textContent=Math.floor(db.coins/100);walletRemain.textContent=db.coins%100;walletBar.style.width=(db.coins%100)+'%';openCount.textContent=db.complaints.filter(c=>c.status!=='Verified Closed').length;closedCount.textContent=db.complaints.filter(c=>c.status==='Verified Closed').length;
+myComplaints.innerHTML=db.complaints.length?db.complaints.slice().reverse().map(c=>`<div class="item"><b>${c.id}</b><div class="small muted">${c.category} • ${c.landmark}</div><div class="small"><span class="status ${c.statusClass}">${c.status}</span> • ${c.worker}</div></div>`).join(''):'<div class="item muted">No complaints yet.</div>';
+workerList.innerHTML=db.complaints.length?db.complaints.slice().reverse().map(c=>`<div class="item"><b>${c.id}</b><div class="small muted">${c.title}</div><div class="small">Worker: ${c.worker} • <span class="status ${c.statusClass}">${c.status}</span></div></div>`).join(''):'<div class="item muted">No tasks yet.</div>';
+workerSelect.innerHTML=db.complaints.map(c=>`<option value="${c.id}">${c.id} - ${c.title}</option>`).join('')||'<option>No complaint</option>';
+adminSelect.innerHTML=workerSelect.innerHTML;
+adminTable.innerHTML=db.complaints.slice().reverse().map(c=>`<tr><td>${c.id}</td><td>${c.category}<div class="small muted">${c.title}</div></td><td>${c.worker}</td><td><span class="status ${c.statusClass}">${c.status}</span></td><td><button class="btn sec" onclick="selectC('${c.id}')">Select</button></td></tr>`).join('')||'<tr><td colspan="5">No complaints yet.</td></tr>';
+totalCount.textContent=db.complaints.length;resolvedCount.textContent=db.complaints.filter(c=>c.status==='Verified Closed').length;escalatedCount.textContent=db.complaints.filter(c=>c.status==='Escalated').length;
+ledger.innerHTML=db.ledger.length?db.ledger.slice().reverse().map(l=>`<div class="item"><b>${l.label}</b><div class="small muted">${l.reason}</div><div class="small muted">${l.delta}</div></div>`).join(''):'<div class="item muted">No reward history yet.</div>';
+walletMsg.classList.add('hide');citizenMsg.classList.add('hide');workerMsg.classList.add('hide');adminMsg.classList.add('hide')
+}
+window.selectC=id=>{workerSelect.value=id;adminSelect.value=id}
+loginBtn.onclick=()=>{
+const r=roleSel.value;
+if(!consent.checked)return show('#loginMsg','Please check consent first.');
+if(user.value===roleData[r].u&&pass.value===roleData[r].p){
+role=r;loginPage.style.display='none';appPage.classList.remove('hide');
+rolePill.textContent=roleData[r].label;heroTitle.textContent=roleData[r].label+' dashboard';
+heroText.textContent='Logged in as '+roleData[r].label+'. Use live location, complaint tracking, and reward withdrawal.';
+showScreen(r==='citizen'?'citizenScreen':r==='worker'?'workerScreen':'adminScreen');
+render()
+}else show('#loginMsg','Invalid login for selected role.')
+};
+$$('.tab[data-role]').forEach(b=>b.onclick=()=>{roleSel.value=b.dataset.role;user.value=roleData[b.dataset.role].u;pass.value=roleData[b.dataset.role].p;$$('.tab[data-role]').forEach(x=>x.classList.remove('active'));b.classList.add('active')});
+roleSel.onchange=()=>{user.value=roleData[roleSel.value].u;pass.value=roleData[roleSel.value].p;$$('.tab[data-role]').forEach(x=>x.classList.toggle('active',x.dataset.role===roleSel.value))};
+logoutBtn.onclick=()=>{appPage.classList.add('hide');loginPage.style.display='flex'};themeBtn.onclick=()=>document.body.style.filter=document.body.style.filter?'':'hue-rotate(180deg)';
+liveLocationBtn.onclick=getPos;geoStateBtn.onclick=checkGeoPermission;duplicateBtn.onclick=()=>show('#citizenMsg',db.complaints.find(c=>c.title.toLowerCase()===title.value.toLowerCase())?'Possible duplicate complaint found.':'No duplicate found.');
+submitComplaint.onclick=()=>{
+const latv=parseFloat(lat.value||0),lngv=parseFloat(lng.value||0);const w=nearestWorker(latv,lngv);const id='SC-'+String(1000+db.complaints.length+1);
+db.complaints.push({id,category:issueType.value,title:title.value,desc:desc.value,landmark:landmark.value,status:'Assigned',statusClass:'prog',worker:w.name,lat:latv,lng:lngv,alt:alt.value,severity:'Medium'});
+db.ledger.push({label:id,reason:`Assigned to ${w.name}`,delta:'+0 coins'});show('#citizenMsg',`${id} submitted and assigned to ${w.name}.`);render()
+};
+acceptTask.onclick=()=>{const c=db.complaints.find(x=>x.id===workerSelect.value);if(!c)return;c.status='Accepted';c.statusClass='prog';show('#workerMsg',c.id+' accepted.');render()};
+completeTask.onclick=()=>{const c=db.complaints.find(x=>x.id===workerSelect.value);if(!c)return;c.status='Completed';c.statusClass='prog';show('#workerMsg',c.id+' completed and waiting for admin verification.');render()};
+extensionBtn.onclick=()=>{const c=db.complaints.find(x=>x.id===workerSelect.value);if(!c)return;c.status='Extension Requested';c.statusClass='open';show('#workerMsg',c.id+' extension requested.');render()};
+verifyBtn.onclick=()=>{const c=db.complaints.find(x=>x.id===adminSelect.value);if(!c)return;c.status='Verified Closed';c.statusClass='done';db.coins+=20;db.ledger.push({label:c.id,reason:'Verified closure reward',delta:'+20 coins = ₹0.20'});show('#adminMsg',c.id+' verified and closed. 20 coins added.');render()};
+reopenBtn.onclick=()=>{const c=db.complaints.find(x=>x.id===adminSelect.value);if(!c)return;c.status='Reopened';c.statusClass='esc';show('#adminMsg',c.id+' reopened.');render()};
+escalateBtn.onclick=()=>{const c=db.complaints.find(x=>x.id===adminSelect.value);if(!c)return;c.status='Escalated';c.statusClass='esc';show('#adminMsg',c.id+' escalated.');render()};
+withdrawBtn.onclick=()=>{
+const coins=parseInt(withdrawCoins.value||0,10);
+if(coins<100)return show('#walletMsg','Minimum withdrawal is 100 coins.');
+if(coins>db.coins)return show('#walletMsg','Not enough coins.');
+if(coins%100!==0)return show('#walletMsg','Withdraw in multiples of 100 coins.');
+const rs=coins/100;
+db.coins-=coins;
+db.ledger.push({label:'WD-'+Date.now(),reason:`Withdrawn ${coins} coins`,delta:`- ${coins} coins = ₹${rs}`});
+show('#walletMsg',`Withdrawal successful: ${coins} coins = ₹${rs}.`);
+render()
+};
+$$('.tab[data-screen]').forEach(t=>t.onclick=()=>showScreen(t.dataset.screen));
+render();
+</script>
+</body>
+</html>
